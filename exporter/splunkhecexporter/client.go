@@ -628,13 +628,6 @@ func (c *client) start(ctx context.Context, host component.Host) (err error) {
 		if err := checkHecHealth(ctx, httpClient, healthCheckURL); err != nil {
 			return fmt.Errorf("%s: health check failed: %w", c.exporterName, err)
 		}
-
-		failoverHealthCheckURL := c.config.getFailoverURL()
-		failoverHealthCheckURL.Path = c.config.HealthPath
-		if err := checkHecHealth(ctx, httpClient, failoverHealthCheckURL); err != nil {
-			c.logger.Warn("failover health check failed:", zap.Error(err))
-			// DO NOT Return an Error if the Failover is now working
-		}
 	}
 	url, _ := c.config.getURL()
 	c.hecWorker = &defaultHecWorker{url, httpClient, buildHTTPHeaders(c.config, c.buildInfo)}
