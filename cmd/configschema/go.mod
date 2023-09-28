@@ -496,6 +496,7 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/internal/datadog v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/internal/sharedcomponent v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/experimentalmetricmetadata v0.86.0 // indirect
+	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/azure v0.0.0-00010101000000-000000000000 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/winperfcounters v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/probabilisticsamplerprocessor v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/servicegraphprocessor v0.86.0 // indirect
@@ -619,6 +620,7 @@ require (
 	go.opentelemetry.io/collector/confmap v0.86.0 // indirect
 	go.opentelemetry.io/collector/connector v0.86.0 // indirect
 	go.opentelemetry.io/collector/consumer v0.86.0 // indirect
+	go.opentelemetry.io/collector/exporter/debugexporter v0.86.0 // indirect
 	go.opentelemetry.io/collector/exporter/loggingexporter v0.86.0 // indirect
 	go.opentelemetry.io/collector/exporter/otlpexporter v0.86.0 // indirect
 	go.opentelemetry.io/collector/exporter/otlphttpexporter v0.86.0 // indirect
