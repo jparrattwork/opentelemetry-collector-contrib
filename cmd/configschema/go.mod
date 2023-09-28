@@ -5,6 +5,7 @@ go 1.20
 require (
 	github.com/fatih/structtag v1.2.0
 	github.com/google/uuid v1.3.1
+	github.com/open-telemetry/opentelemetry-collector-contrib v0.86.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/redisreceiver v0.86.0
 	github.com/stretchr/testify v1.8.4
 	go.opentelemetry.io/collector/component v0.86.0
@@ -80,7 +81,6 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/pdatautil v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/resourcetotelemetry v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/stanza v0.86.0 // indirect
-	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/azure v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/jaeger v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/loki v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/opencensus v0.86.0 // indirect
@@ -501,6 +501,7 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/servicegraphprocessor v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsxrayreceiver v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/azureblobreceiver v0.86.0 // indirect
+	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/azureeventhubreceiver v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/carbonreceiver v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/googlecloudpubsubreceiver v0.86.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/googlecloudspannerreceiver v0.86.0 // indirect
@@ -618,7 +619,6 @@ require (
 	go.opentelemetry.io/collector/confmap v0.86.0 // indirect
 	go.opentelemetry.io/collector/connector v0.86.0 // indirect
 	go.opentelemetry.io/collector/consumer v0.86.0 // indirect
-	go.opentelemetry.io/collector/exporter/debugexporter v0.86.0 // indirect
 	go.opentelemetry.io/collector/exporter/loggingexporter v0.86.0 // indirect
 	go.opentelemetry.io/collector/exporter/otlpexporter v0.86.0 // indirect
 	go.opentelemetry.io/collector/exporter/otlphttpexporter v0.86.0 // indirect
@@ -697,8 +697,6 @@ require (
 
 // Replace references to modules that are in this repository with their relateive paths
 // so that we always build with current (latest) version of the source code.
-
-replace github.com/open-telemetry/opentelemetry-collector-contrib => ../..
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws/awsutil => ../../internal/aws/awsutil
 
@@ -940,8 +938,6 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsxr
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/receiver/azureblobreceiver => ../../receiver/azureblobreceiver
 
-replace github.com/open-telemetry/opentelemetry-collector-contrib/receiver/azureeventhubreceiver => ../../receiver/azureeventhubreceiver
-
 replace github.com/open-telemetry/opentelemetry-collector-contrib/receiver/azuremonitorreceiver => ../../receiver/azuremonitorreceiver
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/receiver/bigipreceiver => ../../receiver/bigipreceiver
@@ -1123,3 +1119,7 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/k8ste
 replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/datadog => ../../internal/datadog
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/extension/jaegerremotesampling => ../../extension/jaegerremotesampling
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib => ../..
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/receiver/azureeventhubreceiver => ../../receiver/azureeventhubreceiver
