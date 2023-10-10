@@ -9,7 +9,7 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/internal/sharedcomponent v0.86.1-0.20231006161201-d364ad61c4d7
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/pdatatest v0.86.1-0.20231006161201-d364ad61c4d7
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/stanza v0.86.1-0.20231006161201-d364ad61c4d7
-  github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/azure v0.86.1-0.20231006161201-d364ad61c4d7
+	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/azure v0.86.1-0.20231006161201-d364ad61c4d7
 	github.com/relvacode/iso8601 v1.3.0
 	github.com/stretchr/testify v1.8.4
 	go.opentelemetry.io/collector/component v0.86.1-0.20231006161201-d364ad61c4d7
@@ -108,7 +108,7 @@ require (
 	go.opentelemetry.io/proto/otlp v1.0.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/crypto v0.14.0 // indirect
-  golang.org/x/exp v0.0.0-20230713183714-613f0c0eb8a1 // indirect
+	golang.org/x/exp v0.0.0-20230713183714-613f0c0eb8a1 // indirect
 	golang.org/x/net v0.17.0 // indirect
 	golang.org/x/sys v0.13.0 // indirect
 	golang.org/x/text v0.13.0 // indirect

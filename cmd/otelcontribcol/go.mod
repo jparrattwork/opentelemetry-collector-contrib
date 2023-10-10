@@ -533,7 +533,7 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/ottl v0.86.1-0.20231006161201-d364ad61c4d7 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/pdatautil v0.86.1-0.20231006161201-d364ad61c4d7 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/resourcetotelemetry v0.86.1-0.20231006161201-d364ad61c4d7 // indirect
-  github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/azure v0.86.1-0.20231006161201-d364ad61c4d7 // indirect
+	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/azure v0.86.1-0.20231006161201-d364ad61c4d7 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/jaeger v0.86.1-0.20231006161201-d364ad61c4d7 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/loki v0.86.1-0.20231006161201-d364ad61c4d7 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/translator/opencensus v0.86.1-0.20231006161201-d364ad61c4d7 // indirect
