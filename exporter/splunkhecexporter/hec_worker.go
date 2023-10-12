@@ -143,10 +143,10 @@ func NewDefaultHecWorker(primaryURL *url.URL, failoverURL *url.URL, breakerConfi
 func (hec *defaultHecWorker) send(ctx context.Context, buf buffer, headers map[string]string, failover bool) error {
 
 	if !failover && hec.primaryBreaker != nil && !hec.primaryBreaker.canExecute(false) {
-		hec.logger.Info("Primary Breaker Open!")
+		hec.logger.Debug("Primary Breaker Open!")
 		return fmt.Errorf("primary breaker open")
 	} else if failover && hec.failoverBreaker != nil && !hec.failoverBreaker.canExecute(true) {
-		hec.logger.Info("Failover Breaker Open!")
+		hec.logger.Debug("Failover Breaker Open!")
 		return fmt.Errorf("failover breaker open")
 	}
 
@@ -156,10 +156,10 @@ func (hec *defaultHecWorker) send(ctx context.Context, buf buffer, headers map[s
 			return nil
 		}
 
-		hec.logger.Info("Sending Failover Request")
+		hec.logger.Debug("Sending Failover Request")
 		reqURL = hec.failoverURL.String()
 	} else {
-		hec.logger.Info("Sending Request")
+		hec.logger.Debug("Sending Request")
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", reqURL, buf)
@@ -208,7 +208,7 @@ func (hec *defaultHecWorker) send(ctx context.Context, buf buffer, headers map[s
 		err = multierr.Combine(err, errCopy)
 	}
 
-	hec.logger.Info("Successful Request!", zap.Bool("failover", failover))
+	hec.logger.Debug("Successful Request!", zap.Bool("failover", failover))
 	hec.updateState(true, failover)
 	return err
 }
